@@ -1,35 +1,95 @@
 body{
-    background-color: yellow;
-    color: white;
-    font-family: 'Comfortaa', cursive;
-    font-size: 1.2em;
-    padding: 0;
-    margin: 0;
-    height: 100%;
+  background-color: #bebdb9; 
+  color: white;
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
+  height: 100%;
 }
 header, footer {
- color: #ffffff;
- background-color: #aeaca8;
- width: 100%;
- height: 50px;
+color: #ffffff;
+background-color: #bebdb9; 
+width: 100%;
+height: 50px;
 }
 header{
-    display: inline-flex;
-    font-family: 'Rambla', sans-serif;
-    font-size: 1.1em;
+  display: inline-flex;
+  font-family: 'Rambla', sans-serif;
+  font-size: 1.0em;
 }
 
-#container{
-    background-image: url(../images/phy11.jpg);
-    display: block;
-    height: 800px;
-}
-
-.otroIntento{
-   color: yellow;
-   font-weight: bold;
+#contenedor{
+  background-image: url(../images/phy11.jpg);
+  display: block;
+  height: 800px;
 }
 
 footer{
-    text-align: center;
+  text-align: center;
+}
+
+#descripcion{
+  grid-area: b1;
+  background-color: rgb(176, 126, 197);
+  color: rgb(255, 246, 246);
+  border-radius: 5px;
+}
+#datos{
+  grid-area: b2;
+  background-color: #8cb7d4;
+  border-radius: 5px;
+}
+#formulas{
+  grid-area: b3;
+  background-color: rgb(148, 209, 181);
+  border-radius: 5px;
+}
+#solucion{
+  grid-area: b4;
+  background-color: rgb(199, 188, 129);
+  color: white;
+  border-radius: 5px;
+}
+#resultado{
+  grid-area: b5;
+  background-color: rgb(93, 104, 230);
+  color: white;
+  border-radius: 5px;
+}
+
+
+#contenedor{
+  display: grid;
+  grid-template-columns:  repeat(4, [col] 1fr) ;
+  grid-template-rows: auto;
+  grid-template-areas: "a a a a "
+                       "b b b b"
+                       "b b b b"
+                       "b b b b"
+                       "c c c c";
+  width: 100%;
+  height: 100%;  
+}
+
+.gridProblema{
+  grid-area: b;  
+}
+#gridHeader{
+  grid-area: a;
+  width: 100%;
+  height: 100px;
+}
+#gridPie{
+  grid-area: c;
+}
+#problema{
+  display: grid;
+  grid-template-columns:  repeat(4, [col] 1fr) ;
+  grid-template-rows: auto;
+  grid-template-areas: "b1 b1 b1 b1"
+                       "b2 b2 b3 b3"
+                       "b4 b4 b5 b5";
+  width: 100%;
+  height: 100%;
 }
